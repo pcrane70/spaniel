@@ -1,0 +1,11 @@
+import { SpanielIntersectionObserver } from './intersection-observer';
+import { SpanielTrackedElement, DOMMargin } from './interfaces';
+export { Watcher, WatcherConfig } from './watcher';
+import { SpanielObserver } from './spaniel-observer';
+import { setGlobalEngine, getGlobalEngine } from './metal/engine';
+import { on, off, scheduleWork, scheduleRead, Frame } from './metal/index';
+import w from './metal/window-proxy';
+import { invalidate } from './metal/window-proxy';
+export { on, off, scheduleRead, scheduleWork, SpanielIntersectionObserver as IntersectionObserver, SpanielObserver, SpanielTrackedElement, setGlobalEngine, getGlobalEngine, w as __w__, invalidate };
+export declare function queryElement(el: Element, callback: (clientRect: ClientRect, frame: Frame) => void): void;
+export declare function elementSatisfiesRatio(el: Element, ratio: number, callback: (result: Boolean) => void, rootMargin?: DOMMargin): void;
